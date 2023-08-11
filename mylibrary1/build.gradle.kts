@@ -1,6 +1,8 @@
+import io.grpc.internal.SharedResourceHolder.release
+
 plugins {
     id("com.android.library")
-    `maven-publish`
+//    `maven-publish`
 }
 
 android {
@@ -34,3 +36,21 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
+
+//afterEvaluate {
+//    android.libraryVariants.forEach {  }
+//}
+
+//afterEvaluate {
+//    publishing {
+//        publications {
+//// Creates a Maven publication called "release".
+//            release(MavenPublication) {
+//                from components.release
+//                        groupId = 'com.github.Vipinbalakrishnan'
+//                artifactId = 'ribbonlayout'
+//                version = '1.1'
+//            }
+//        }
+//    }
+//}
